@@ -1,0 +1,111 @@
+== source rn50_v1 n 700
+   base170       {'rn50_v1': 691, 'dn121': 555, 'vgg16_bn': 437, 'vit_b_16': 16}
+   base175       {'rn50_v1': 690, 'dn121': 563, 'vgg16_bn': 439, 'vit_b_16': 17}
+   base200       {'rn50_v1': 688, 'dn121': 565, 'vgg16_bn': 442, 'vit_b_16': 14}
+   fft_author    {'rn50_v1': 688, 'dn121': 509, 'vgg16_bn': 452, 'vit_b_16': 10}
+   fft_continue  {'rn50_v1': 691, 'dn121': 574, 'vgg16_bn': 479, 'vit_b_16': 26}
+   ila_author    {'rn50_v1': 688, 'dn121': 551, 'vgg16_bn': 486, 'vit_b_16': 12}
+   ila_continue  {'rn50_v1': 689, 'dn121': 564, 'vgg16_bn': 466, 'vit_b_16': 25}
+   aaf_author    {'rn50_v1': 690, 'dn121': 546, 'vgg16_bn': 480, 'vit_b_16': 13}
+   aaf_continue  {'rn50_v1': 691, 'dn121': 582, 'vgg16_bn': 487, 'vit_b_16': 29}
+  dn121     fft_continue vs fft_author   +9.3pp [ +6.9,+11.7] gain/loss 76/11 p=4.2e-13 | logodds 552/148 p=1.3e-55
+  dn121     aaf_continue vs aaf_author   +5.1pp [ +3.0, +7.4] gain/loss 50/14 p=7.1e-06 | logodds 477/223 p=4e-22
+  dn121     ila_continue vs ila_author   +1.9pp [ +0.0, +3.6] gain/loss 26/13 p=0.053 | logodds 468/232 p=3e-19
+  dn121     fft_continue vs base200      +1.3pp [ -0.3, +2.9] gain/loss 21/12 p=0.16 | logodds 440/260 p=1e-11
+  dn121     aaf_continue vs base200      +2.4pp [ +0.6, +4.3] gain/loss 30/13 p=0.014 | logodds 458/242 p=2.6e-16
+  dn121     ila_continue vs base200      -0.1pp [ -2.0, +1.7] gain/loss 21/22 p=1 | logodds 348/352 p=0.91
+  dn121       fft_author vs base200      -8.0pp [-10.6, -5.4] gain/loss 18/74 p=3.1e-09 | logodds 235/465 p=2.4e-18
+  dn121       aaf_author vs base200      -2.7pp [ -5.1, -0.4] gain/loss 26/45 p=0.032 | logodds 347/353 p=0.85
+  dn121       ila_author vs base200      -2.0pp [ -4.1, +0.1] gain/loss 24/38 p=0.098 | logodds 263/437 p=5e-11
+  vgg16_bn  fft_continue vs fft_author   +3.9pp [ +1.4, +6.3] gain/loss 53/26 p=0.0032 | logodds 429/271 p=2.5e-09
+  vgg16_bn  aaf_continue vs aaf_author   +1.0pp [ -1.3, +3.3] gain/loss 37/30 p=0.46 | logodds 322/378 p=0.038
+  vgg16_bn  ila_continue vs ila_author   -2.9pp [ -5.0, -0.7] gain/loss 21/41 p=0.015 | logodds 320/380 p=0.026
+  vgg16_bn  fft_continue vs base200      +5.3pp [ +2.9, +7.7] gain/loss 58/21 p=3.8e-05 | logodds 492/208 p=2e-27
+  vgg16_bn  aaf_continue vs base200      +6.4pp [ +4.0, +8.9] gain/loss 66/21 p=1.4e-06 | logodds 519/181 p=1.1e-38
+  vgg16_bn  ila_continue vs base200      +3.4pp [ +0.9, +6.0] gain/loss 52/28 p=0.0097 | logodds 437/263 p=5e-11
+  vgg16_bn    fft_author vs base200      +1.4pp [ -1.4, +4.4] gain/loss 60/50 p=0.39 | logodds 390/310 p=0.0028
+  vgg16_bn    aaf_author vs base200      +5.4pp [ +2.4, +8.4] gain/loss 73/35 p=0.00033 | logodds 469/231 p=1.5e-19
+  vgg16_bn    ila_author vs base200      +6.3pp [ +3.4, +9.1] gain/loss 75/31 p=2.3e-05 | logodds 442/258 p=3.5e-12
+  vit_b_16  fft_continue vs fft_author   +2.3pp [ +1.1, +3.6] gain/loss 18/2 p=0.0004 | logodds 516/184 p=2.6e-37
+  vit_b_16  aaf_continue vs aaf_author   +2.3pp [ +1.0, +3.6] gain/loss 19/3 p=0.00086 | logodds 484/216 p=1.6e-24
+  vit_b_16  ila_continue vs ila_author   +1.9pp [ +0.9, +3.0] gain/loss 14/1 p=0.00098 | logodds 509/191 p=3e-34
+  vit_b_16  fft_continue vs base200      +1.7pp [ +0.7, +2.7] gain/loss 13/1 p=0.0018 | logodds 404/296 p=5.1e-05
+  vit_b_16  aaf_continue vs base200      +2.1pp [ +1.0, +3.4] gain/loss 18/3 p=0.0015 | logodds 433/267 p=3.7e-10
+  vit_b_16  ila_continue vs base200      +1.6pp [ +0.6, +2.6] gain/loss 12/1 p=0.0034 | logodds 390/310 p=0.0028
+  vit_b_16    fft_author vs base200      -0.6pp [ -1.4, +0.3] gain/loss 3/7 p=0.34 | logodds 254/446 p=3.8e-13
+  vit_b_16    aaf_author vs base200      -0.1pp [ -1.0, +0.7] gain/loss 4/5 p=1 | logodds 310/390 p=0.0028
+  vit_b_16    ila_author vs base200      -0.3pp [ -1.1, +0.6] gain/loss 4/6 p=0.75 | logodds 248/452 p=1.1e-14
+== source dn121 n 700
+   base170       {'dn121': 687, 'rn50_v1': 363, 'vgg16_bn': 296, 'vit_b_16': 7}
+   base175       {'dn121': 687, 'rn50_v1': 366, 'vgg16_bn': 296, 'vit_b_16': 7}
+   base200       {'dn121': 688, 'rn50_v1': 377, 'vgg16_bn': 303, 'vit_b_16': 16}
+   fft_author    {'dn121': 683, 'rn50_v1': 435, 'vgg16_bn': 380, 'vit_b_16': 6}
+   fft_continue  {'dn121': 688, 'rn50_v1': 444, 'vgg16_bn': 367, 'vit_b_16': 20}
+   ila_author    {'dn121': 676, 'rn50_v1': 414, 'vgg16_bn': 372, 'vit_b_16': 4}
+   ila_continue  {'dn121': 687, 'rn50_v1': 417, 'vgg16_bn': 335, 'vit_b_16': 18}
+   aaf_author    {'dn121': 681, 'rn50_v1': 459, 'vgg16_bn': 402, 'vit_b_16': 9}
+   aaf_continue  {'dn121': 686, 'rn50_v1': 437, 'vgg16_bn': 373, 'vit_b_16': 13}
+  rn50_v1   fft_continue vs fft_author   +1.3pp [ -1.3, +3.9] gain/loss 45/36 p=0.37 | logodds 371/329 p=0.12
+  rn50_v1   aaf_continue vs aaf_author   -3.1pp [ -5.4, -1.0] gain/loss 21/43 p=0.0081 | logodds 274/426 p=1e-08
+  rn50_v1   ila_continue vs ila_author   +0.4pp [ -1.9, +2.7] gain/loss 35/32 p=0.81 | logodds 362/338 p=0.38
+  rn50_v1   fft_continue vs base200      +9.6pp [ +7.3,+12.1] gain/loss 75/8 p=9.1e-15 | logodds 574/126 p=3.9e-69
+  rn50_v1   aaf_continue vs base200      +8.6pp [ +6.1,+11.0] gain/loss 72/12 p=1.4e-11 | logodds 588/112 p=8.9e-79
+  rn50_v1   ila_continue vs base200      +5.7pp [ +3.3, +8.3] gain/loss 59/19 p=6.4e-06 | logodds 516/184 p=2.6e-37
+  rn50_v1     fft_author vs base200      +8.3pp [ +5.3,+11.3] gain/loss 90/32 p=1.4e-07 | logodds 478/222 p=1.9e-22
+  rn50_v1     aaf_author vs base200     +11.7pp [ +8.7,+14.6] gain/loss 101/19 p=1.1e-14 | logodds 565/135 p=2.2e-63
+  rn50_v1     ila_author vs base200      +5.3pp [ +2.6, +8.0] gain/loss 68/31 p=0.00026 | logodds 461/239 p=3.6e-17
+  vgg16_bn  fft_continue vs fft_author   -1.9pp [ -4.4, +0.6] gain/loss 31/44 p=0.17 | logodds 293/407 p=1.9e-05
+  vgg16_bn  aaf_continue vs aaf_author   -4.1pp [ -6.6, -1.9] gain/loss 21/50 p=0.00077 | logodds 222/478 p=1.9e-22
+  vgg16_bn  ila_continue vs ila_author   -5.3pp [ -7.9, -2.9] gain/loss 23/60 p=6e-05 | logodds 282/418 p=3.1e-07
+  vgg16_bn  fft_continue vs base200      +9.1pp [ +6.4,+11.9] gain/loss 81/17 p=3.6e-11 | logodds 556/144 p=6.1e-58
+  vgg16_bn  aaf_continue vs base200     +10.0pp [ +7.4,+12.6] gain/loss 82/12 p=5.6e-14 | logodds 573/127 p=1.8e-68
+  vgg16_bn  ila_continue vs base200      +4.6pp [ +2.1, +7.1] gain/loss 58/26 p=0.00063 | logodds 511/189 p=4.2e-35
+  vgg16_bn    fft_author vs base200     +11.0pp [ +8.0,+14.0] gain/loss 98/21 p=4.4e-13 | logodds 549/151 p=6.3e-54
+  vgg16_bn    aaf_author vs base200     +14.1pp [+11.1,+17.1] gain/loss 115/16 p=1.2e-19 | logodds 589/111 p=1.7e-79
+  vgg16_bn    ila_author vs base200      +9.9pp [ +6.9,+12.9] gain/loss 97/28 p=4.2e-10 | logodds 526/174 p=5.9e-42
+  vit_b_16  fft_continue vs fft_author   +2.0pp [ +1.0, +3.1] gain/loss 15/1 p=0.00052 | logodds 456/244 p=9.2e-16
+  vit_b_16  aaf_continue vs aaf_author   +0.6pp [ -0.3, +1.6] gain/loss 7/3 p=0.34 | logodds 447/253 p=2.1e-13
+  vit_b_16  ila_continue vs ila_author   +2.0pp [ +1.0, +3.1] gain/loss 14/0 p=0.00012 | logodds 481/219 p=1.8e-23
+  vit_b_16  fft_continue vs base200      +0.6pp [ -0.3, +1.6] gain/loss 8/4 p=0.39 | logodds 425/275 p=1.6e-08
+  vit_b_16  aaf_continue vs base200      -0.4pp [ -1.1, +0.3] gain/loss 2/5 p=0.45 | logodds 441/259 p=6e-12
+  vit_b_16  ila_continue vs base200      +0.3pp [ -0.7, +1.3] gain/loss 7/5 p=0.77 | logodds 406/294 p=2.6e-05
+  vit_b_16    fft_author vs base200      -1.4pp [ -2.6, -0.4] gain/loss 2/12 p=0.013 | logodds 300/400 p=0.00018
+  vit_b_16    aaf_author vs base200      -1.0pp [ -2.1, +0.1] gain/loss 5/12 p=0.14 | logodds 362/338 p=0.38
+  vit_b_16    ila_author vs base200      -1.7pp [ -2.7, -0.9] gain/loss 0/12 p=0.00049 | logodds 284/416 p=6.9e-07
+== source vgg16_bn n 700
+   base170       {'vgg16_bn': 665, 'rn50_v1': 206, 'dn121': 227, 'vit_b_16': 1}
+   base175       {'vgg16_bn': 665, 'rn50_v1': 208, 'dn121': 223, 'vit_b_16': 1}
+   base200       {'vgg16_bn': 666, 'rn50_v1': 214, 'dn121': 228, 'vit_b_16': 1}
+   fft_author    {'vgg16_bn': 662, 'rn50_v1': 213, 'dn121': 243, 'vit_b_16': 0}
+   fft_continue  {'vgg16_bn': 669, 'rn50_v1': 248, 'dn121': 283, 'vit_b_16': 2}
+   ila_author    {'vgg16_bn': 661, 'rn50_v1': 196, 'dn121': 207, 'vit_b_16': 1}
+   ila_continue  {'vgg16_bn': 666, 'rn50_v1': 219, 'dn121': 243, 'vit_b_16': 1}
+   aaf_author    {'vgg16_bn': 667, 'rn50_v1': 241, 'dn121': 246, 'vit_b_16': 1}
+   aaf_continue  {'vgg16_bn': 666, 'rn50_v1': 248, 'dn121': 285, 'vit_b_16': 1}
+  rn50_v1   fft_continue vs fft_author   +5.0pp [ +3.1, +6.9] gain/loss 42/7 p=3.6e-07 | logodds 481/219 p=1.8e-23
+  rn50_v1   aaf_continue vs aaf_author   +1.0pp [ -1.0, +3.1] gain/loss 30/23 p=0.41 | logodds 447/253 p=2.1e-13
+  rn50_v1   ila_continue vs ila_author   +3.3pp [ +1.4, +5.3] gain/loss 35/12 p=0.0011 | logodds 493/207 p=8.4e-28
+  rn50_v1   fft_continue vs base200      +4.9pp [ +2.7, +7.0] gain/loss 47/13 p=1.2e-05 | logodds 487/213 p=1.4e-25
+  rn50_v1   aaf_continue vs base200      +4.9pp [ +2.9, +6.9] gain/loss 43/9 p=2e-06 | logodds 522/178 p=4.7e-40
+  rn50_v1   ila_continue vs base200      +0.7pp [ -1.1, +2.6] gain/loss 25/20 p=0.55 | logodds 436/264 p=8.3e-11
+  rn50_v1     fft_author vs base200      -0.1pp [ -2.4, +2.1] gain/loss 34/35 p=1 | logodds 342/358 p=0.57
+  rn50_v1     aaf_author vs base200      +3.9pp [ +1.6, +6.1] gain/loss 49/22 p=0.0018 | logodds 403/297 p=7e-05
+  rn50_v1     ila_author vs base200      -2.6pp [ -4.7, -0.4] gain/loss 19/37 p=0.022 | logodds 308/392 p=0.0017
+  dn121     fft_continue vs fft_author   +5.7pp [ +3.3, +8.1] gain/loss 57/17 p=3.4e-06 | logodds 521/179 p=1.4e-39
+  dn121     aaf_continue vs aaf_author   +5.6pp [ +3.3, +7.9] gain/loss 55/16 p=3.8e-06 | logodds 472/228 p=1.7e-20
+  dn121     ila_continue vs ila_author   +5.1pp [ +2.7, +7.4] gain/loss 54/18 p=2.6e-05 | logodds 512/188 p=1.5e-35
+  dn121     fft_continue vs base200      +7.9pp [ +5.6,+10.1] gain/loss 65/10 p=5.2e-11 | logodds 525/175 p=1.8e-41
+  dn121     aaf_continue vs base200      +8.1pp [ +5.9,+10.4] gain/loss 65/8 p=3.2e-12 | logodds 529/171 p=2e-43
+  dn121     ila_continue vs base200      +2.1pp [ +0.1, +4.1] gain/loss 35/20 p=0.058 | logodds 449/251 p=6.6e-14
+  dn121       fft_author vs base200      +2.1pp [ -0.4, +4.9] gain/loss 50/35 p=0.13 | logodds 319/381 p=0.021
+  dn121       aaf_author vs base200      +2.6pp [ +0.0, +5.1] gain/loss 53/35 p=0.069 | logodds 388/312 p=0.0046
+  dn121       ila_author vs base200      -3.0pp [ -5.1, -0.7] gain/loss 22/43 p=0.013 | logodds 277/423 p=3.8e-08
+  vit_b_16  fft_continue vs fft_author   +0.3pp [ +0.0, +0.7] gain/loss 2/0 p=0.5 | logodds 483/217 p=3.6e-24
+  vit_b_16  aaf_continue vs aaf_author   +0.0pp [ -0.4, +0.4] gain/loss 1/1 p=1 | logodds 473/227 p=8.1e-21
+  vit_b_16  ila_continue vs ila_author   +0.0pp [ -0.4, +0.4] gain/loss 1/1 p=1 | logodds 468/232 p=3e-19
+  vit_b_16  fft_continue vs base200      +0.1pp [ -0.3, +0.6] gain/loss 2/1 p=1 | logodds 380/320 p=0.026
+  vit_b_16  aaf_continue vs base200      +0.0pp [ -0.4, +0.4] gain/loss 1/1 p=1 | logodds 370/330 p=0.14
+  vit_b_16  ila_continue vs base200      +0.0pp [ -0.4, +0.4] gain/loss 1/1 p=1 | logodds 346/354 p=0.79
+  vit_b_16    fft_author vs base200      -0.1pp [ -0.4, +0.0] gain/loss 0/1 p=1 | logodds 257/443 p=2e-12
+  vit_b_16    aaf_author vs base200      +0.0pp [ -0.4, +0.4] gain/loss 1/1 p=1 | logodds 262/438 p=3e-11
+  vit_b_16    ila_author vs base200      +0.0pp [ -0.4, +0.4] gain/loss 1/1 p=1 | logodds 251/449 p=6.6e-14

@@ -1,0 +1,15 @@
+base exit=0 wall_ms=5656433
+eval_base170 exit=0 wall_ms=54069
+eval_base200 exit=0 wall_ms=56299
+fft_author exit=0 wall_ms=849450
+eval_fft_author exit=0 wall_ms=55630
+logit-fft_author exit=0 wall_ms=327934
+eval_logit-fft_author exit=0 wall_ms=57828
+fft_continue exit=0 wall_ms=856343
+eval_fft_continue exit=0 wall_ms=59252
+logit-fft_continue exit=0 wall_ms=320152
+eval_logit-fft_continue exit=0 wall_ms=56319
+aaf_author exit=0 wall_ms=2227565
+eval_aaf_author exit=0 wall_ms=67117
+aaf_continue exit=0 wall_ms=2580975
+eval_aaf_continue exit=0 wall_ms=54460

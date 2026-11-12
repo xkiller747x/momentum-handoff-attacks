@@ -1,0 +1,20 @@
+Post-hoc: choose reset vs inherit using the OTHER CNN target as proxy (hold-out data, not pre-registered)
+rn50_v1   fft  proxy=dn121    eval=vgg16_bn pick=continue inherit= 68.4 reset= 64.6 chosen= 68.4
+rn50_v1   fft  proxy=vgg16_bn eval=dn121    pick=continue inherit= 82.0 reset= 72.7 chosen= 82.0
+rn50_v1   aaf  proxy=dn121    eval=vgg16_bn pick=continue inherit= 69.6 reset= 68.6 chosen= 69.6
+rn50_v1   aaf  proxy=vgg16_bn eval=dn121    pick=continue inherit= 83.1 reset= 78.0 chosen= 83.1
+rn50_v1   ila  proxy=dn121    eval=vgg16_bn pick=continue inherit= 66.6 reset= 69.4 chosen= 66.6
+rn50_v1   ila  proxy=vgg16_bn eval=dn121    pick=author   inherit= 80.6 reset= 78.7 chosen= 78.7
+dn121     fft  proxy=rn50_v1  eval=vgg16_bn pick=continue inherit= 52.4 reset= 54.3 chosen= 52.4
+dn121     fft  proxy=vgg16_bn eval=rn50_v1  pick=author   inherit= 63.4 reset= 62.1 chosen= 62.1
+dn121     aaf  proxy=rn50_v1  eval=vgg16_bn pick=author   inherit= 53.3 reset= 57.4 chosen= 57.4
+dn121     aaf  proxy=vgg16_bn eval=rn50_v1  pick=author   inherit= 62.4 reset= 65.6 chosen= 65.6
+dn121     ila  proxy=rn50_v1  eval=vgg16_bn pick=continue inherit= 47.9 reset= 53.1 chosen= 47.9
+dn121     ila  proxy=vgg16_bn eval=rn50_v1  pick=author   inherit= 59.6 reset= 59.1 chosen= 59.1
+vgg16_bn  fft  proxy=rn50_v1  eval=dn121    pick=continue inherit= 40.4 reset= 34.7 chosen= 40.4
+vgg16_bn  fft  proxy=dn121    eval=rn50_v1  pick=continue inherit= 35.4 reset= 30.4 chosen= 35.4
+vgg16_bn  aaf  proxy=rn50_v1  eval=dn121    pick=continue inherit= 40.7 reset= 35.1 chosen= 40.7
+vgg16_bn  aaf  proxy=dn121    eval=rn50_v1  pick=continue inherit= 35.4 reset= 34.4 chosen= 35.4
+vgg16_bn  ila  proxy=rn50_v1  eval=dn121    pick=continue inherit= 34.7 reset= 29.6 chosen= 34.7
+vgg16_bn  ila  proxy=dn121    eval=rn50_v1  pick=continue inherit= 31.3 reset= 28.0 chosen= 31.3
+{'always_inherit': 55.96, 'always_reset': 54.22, 'proxy_select': 56.17, 'oracle': 56.92} n= 18

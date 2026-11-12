@@ -1,0 +1,96 @@
+replay rn50_v1 reset png identical 256 / 256
+replay rn50_v1 keep png identical 256 / 256
+replay dn121 reset png identical 256 / 256
+replay dn121 keep png identical 256 / 256
+
+===== source rn50_v1 (n=64); counts ['dn121', 'vgg16_bn', 'vit_b_16']
+  base170 [53, 46, 1]  base175 [53, 46, 1]  base200 [52, 46, 1]
+ -- fft  (counts per target; CNN mean %)
+    s=160  reset:[47, 46, 1] 72.7%   keep:[52, 49, 1] 78.9%
+    s=150  reset:[42, 40, 1] 64.1%   keep:[50, 49, 1] 77.3%
+    s=130  reset:[43, 41, 1] 65.6%   keep:[53, 46, 3] 77.3%
+    s=100  reset:[43, 39, 1] 64.1%   keep:[47, 45, 3] 71.9%
+    vs author(s160 reset): diff pp [boot95] McNemar p, logodds better/worse on 2 CNN targets
+      s160 keep  dn121:+7.8[+1.6,+15.6] p=0.062 lo49/15 | vgg16_bn:+4.7[-1.6,+12.5] p=0.375 lo39/25
+      s150 reset dn121:-7.8[-15.6,-1.6] p=0.062 lo12/52 | vgg16_bn:-9.4[-18.8,-1.6] p=0.070 lo14/50
+      s150 keep  dn121:+4.7[+0.0,+10.9] p=0.250 lo52/12 | vgg16_bn:+4.7[-3.1,+12.5] p=0.453 lo43/21
+      s130 reset dn121:-6.2[-12.5,-1.6] p=0.125 lo10/54 | vgg16_bn:-7.8[-17.2,+0.0] p=0.180 lo17/47
+      s130 keep  dn121:+9.4[+3.1,+17.2] p=0.031 lo41/23 | vgg16_bn:+0.0[-7.8,+9.4] p=1.000 lo42/22
+      s100 reset dn121:-6.2[-14.1,+0.0] p=0.219 lo17/47 | vgg16_bn:-10.9[-21.9,+0.0] p=0.092 lo26/38
+      s100 keep  dn121:+0.0[+0.0,+0.0] p=1.000 lo26/38 | vgg16_bn:-1.6[-10.9,+7.8] p=1.000 lo31/33
+ -- aaf  (counts per target; CNN mean %)
+    s=160  reset:[53, 46, 1] 77.3%   keep:[54, 49, 1] 80.5%
+    s=150  reset:[54, 47, 1] 78.9%   keep:[54, 47, 1] 78.9%
+    s=130  reset:[54, 47, 1] 78.9%   keep:[55, 47, 2] 79.7%
+    s=100  reset:[51, 45, 1] 75.0%   keep:[51, 45, 2] 75.0%
+    vs author(s160 reset): diff pp [boot95] McNemar p, logodds better/worse on 2 CNN targets
+      s160 keep  dn121:+1.6[+0.0,+4.7] p=1.000 lo47/17 | vgg16_bn:+4.7[-1.6,+10.9] p=0.375 lo31/33
+      s150 reset dn121:+1.6[+0.0,+4.7] p=1.000 lo29/35 | vgg16_bn:+1.6[+0.0,+4.7] p=1.000 lo38/26
+      s150 keep  dn121:+1.6[+0.0,+4.7] p=1.000 lo50/14 | vgg16_bn:+1.6[-4.7,+7.8] p=1.000 lo40/24
+      s130 reset dn121:+1.6[-3.1,+6.3] p=1.000 lo24/40 | vgg16_bn:+1.6[-3.1,+6.2] p=1.000 lo34/30
+      s130 keep  dn121:+3.1[-3.1,+9.4] p=0.625 lo40/24 | vgg16_bn:+1.6[-3.1,+7.8] p=1.000 lo41/23
+      s100 reset dn121:-3.1[-9.4,+3.1] p=0.625 lo17/47 | vgg16_bn:-1.6[-9.4,+6.2] p=1.000 lo26/38
+      s100 keep  dn121:-3.1[-9.4,+3.1] p=0.625 lo25/39 | vgg16_bn:-1.6[-9.4,+6.2] p=1.000 lo33/31
+ -- ila  (counts per target; CNN mean %)
+    s=160  reset:[51, 50, 1] 78.9%   keep:[53, 49, 2] 79.7%
+    s=150  reset:[46, 49, 1] 74.2%   keep:[53, 48, 1] 78.9%
+    s=130  reset:[48, 46, 1] 73.4%   keep:[49, 47, 1] 75.0%
+    s=100  reset:[48, 42, 1] 70.3%   keep:[45, 43, 1] 68.8%
+    vs author(s160 reset): diff pp [boot95] McNemar p, logodds better/worse on 2 CNN targets
+      s160 keep  dn121:+3.1[-4.7,+10.9] p=0.688 lo40/24 | vgg16_bn:-1.6[-9.4,+6.2] p=1.000 lo26/38
+      s150 reset dn121:-7.8[-17.2,+1.6] p=0.180 lo13/51 | vgg16_bn:-1.6[-7.8,+3.1] p=1.000 lo17/47
+      s150 keep  dn121:+3.1[-4.7,+10.9] p=0.727 lo33/31 | vgg16_bn:-3.1[-9.4,+3.1] p=0.625 lo27/37
+      s130 reset dn121:-4.7[-14.1,+4.7] p=0.508 lo10/54 | vgg16_bn:-6.2[-15.6,+1.6] p=0.289 lo14/50
+      s130 keep  dn121:-3.1[-12.5,+4.7] p=0.727 lo19/45 | vgg16_bn:-4.7[-12.5,+1.6] p=0.375 lo25/39
+      s100 reset dn121:-4.7[-15.6,+6.2] p=0.581 lo16/48 | vgg16_bn:-12.5[-21.9,-3.1] p=0.021 lo16/48
+      s100 keep  dn121:-9.4[-20.3,+0.0] p=0.146 lo13/51 | vgg16_bn:-10.9[-18.8,-4.7] p=0.016 lo21/43
+
+===== source dn121 (n=64); counts ['rn50_v1', 'vgg16_bn', 'vit_b_16']
+  base170 [35, 28, 1]  base175 [38, 26, 0]  base200 [35, 29, 0]
+ -- fft  (counts per target; CNN mean %)
+    s=160  reset:[44, 36, 0] 62.5%   keep:[45, 36, 1] 63.3%
+    s=150  reset:[40, 35, 0] 58.6%   keep:[42, 36, 2] 60.9%
+    s=130  reset:[40, 37, 0] 60.2%   keep:[45, 41, 3] 67.2%
+    s=100  reset:[43, 39, 0] 64.1%   keep:[47, 40, 4] 68.0%
+    vs author(s160 reset): diff pp [boot95] McNemar p, logodds better/worse on 2 CNN targets
+      s160 keep  rn50_v1:+1.6[-6.2,+9.4] p=1.000 lo36/28 | vgg16_bn:+0.0[-7.8,+9.4] p=1.000 lo24/40
+      s150 reset rn50_v1:-6.2[-14.1,+0.0] p=0.219 lo25/39 | vgg16_bn:-1.6[-7.8,+4.7] p=1.000 lo23/41
+      s150 keep  rn50_v1:-3.1[-10.9,+4.7] p=0.727 lo46/18 | vgg16_bn:+0.0[-7.8,+9.4] p=1.000 lo37/27
+      s130 reset rn50_v1:-6.2[-14.1,+1.6] p=0.289 lo27/37 | vgg16_bn:+1.6[-6.2,+9.4] p=1.000 lo29/35
+      s130 keep  rn50_v1:+1.6[-4.7,+7.9] p=1.000 lo46/18 | vgg16_bn:+7.8[+0.0,+15.6] p=0.125 lo40/24
+      s100 reset rn50_v1:-1.6[-9.4,+6.2] p=1.000 lo35/29 | vgg16_bn:+4.7[-4.7,+14.1] p=0.508 lo33/31
+      s100 keep  rn50_v1:+4.7[-3.1,+12.5] p=0.453 lo46/18 | vgg16_bn:+6.2[-3.1,+15.6] p=0.344 lo39/25
+ -- aaf  (counts per target; CNN mean %)
+    s=160  reset:[45, 40, 0] 66.4%   keep:[48, 35, 1] 64.8%
+    s=150  reset:[47, 44, 0] 71.1%   keep:[47, 41, 1] 68.8%
+    s=130  reset:[46, 46, 0] 71.9%   keep:[48, 43, 1] 71.1%
+    s=100  reset:[45, 47, 0] 71.9%   keep:[46, 42, 4] 68.8%
+    vs author(s160 reset): diff pp [boot95] McNemar p, logodds better/worse on 2 CNN targets
+      s160 keep  rn50_v1:+4.7[+0.0,+10.9] p=0.250 lo29/35 | vgg16_bn:-7.8[-17.2,+1.6] p=0.227 lo16/48
+      s150 reset rn50_v1:+3.1[-3.1,+9.4] p=0.625 lo40/24 | vgg16_bn:+6.2[-1.6,+15.6] p=0.289 lo42/22
+      s150 keep  rn50_v1:+3.1[+0.0,+7.8] p=0.500 lo36/28 | vgg16_bn:+1.6[-6.2,+9.4] p=1.000 lo26/38
+      s130 reset rn50_v1:+1.6[-4.7,+7.8] p=1.000 lo38/26 | vgg16_bn:+9.4[+1.6,+17.2] p=0.070 lo42/22
+      s130 keep  rn50_v1:+4.7[+0.0,+10.9] p=0.250 lo46/18 | vgg16_bn:+4.7[-4.7,+14.1] p=0.508 lo38/26
+      s100 reset rn50_v1:+0.0[-9.4,+9.4] p=1.000 lo33/31 | vgg16_bn:+10.9[+0.0,+21.9] p=0.092 lo36/28
+      s100 keep  rn50_v1:+1.6[-6.2,+9.4] p=1.000 lo38/26 | vgg16_bn:+3.1[-6.2,+12.5] p=0.754 lo29/35
+ -- ila  (counts per target; CNN mean %)
+    s=160  reset:[39, 36, 0] 58.6%   keep:[43, 31, 1] 57.8%
+    s=150  reset:[36, 31, 0] 52.3%   keep:[41, 33, 1] 57.8%
+    s=130  reset:[38, 30, 0] 53.1%   keep:[43, 33, 1] 59.4%
+    s=100  reset:[38, 27, 0] 50.8%   keep:[42, 29, 1] 55.5%
+    vs author(s160 reset): diff pp [boot95] McNemar p, logodds better/worse on 2 CNN targets
+      s160 keep  rn50_v1:+6.2[-1.6,+15.6] p=0.289 lo34/30 | vgg16_bn:-7.8[-18.8,+3.1] p=0.267 lo22/42
+      s150 reset rn50_v1:-4.7[-12.5,+3.1] p=0.453 lo21/43 | vgg16_bn:-7.8[-18.8,+3.1] p=0.267 lo16/48
+      s150 keep  rn50_v1:+3.1[-4.7,+10.9] p=0.688 lo33/31 | vgg16_bn:-4.7[-15.6,+6.2] p=0.581 lo29/35
+      s130 reset rn50_v1:-1.6[-9.4,+6.2] p=1.000 lo23/41 | vgg16_bn:-9.4[-18.8,+0.0] p=0.109 lo13/51
+      s130 keep  rn50_v1:+6.2[+0.0,+14.1] p=0.219 lo36/28 | vgg16_bn:-4.7[-15.6,+6.2] p=0.581 lo25/39
+      s100 reset rn50_v1:-1.6[-12.5,+9.4] p=1.000 lo19/45 | vgg16_bn:-14.1[-25.0,-3.1] p=0.022 lo19/45
+      s100 keep  rn50_v1:+4.7[-6.2,+15.6] p=0.581 lo30/34 | vgg16_bn:-10.9[-21.9,+0.0] p=0.118 lo25/39
+
+== ViT-B/16: successes and median target log-odds; log-odds better/worse vs author (s160 reset)
+rn50_v1 fft: s160r:1 med-8.2 0/0 | s160k:1 med-7.5 53/11 | s130r:1 med-8.1 32/32 | s130k:3 med-7.3 54/10 | s100r:1 med-7.8 38/26 | s100k:3 med-7.0 48/16
+rn50_v1 aaf: s160r:1 med-8.0 0/0 | s160k:1 med-7.5 47/17 | s130r:1 med-7.8 32/32 | s130k:2 med-7.2 50/14 | s100r:1 med-7.8 33/31 | s100k:2 med-7.1 44/20
+rn50_v1 ila: s160r:1 med-7.9 0/0 | s160k:2 med-7.6 44/20 | s130r:1 med-8.2 24/40 | s130k:1 med-7.3 46/18 | s100r:1 med-8.1 32/32 | s100k:1 med-7.6 41/23
+dn121 fft: s160r:0 med-7.8 0/0 | s160k:1 med-7.7 38/26 | s130r:0 med-7.9 33/31 | s130k:3 med-7.4 51/13 | s100r:0 med-7.6 35/29 | s100k:4 med-7.2 50/14
+dn121 aaf: s160r:0 med-7.8 0/0 | s160k:1 med-7.8 33/31 | s130r:0 med-7.7 33/31 | s130k:1 med-7.1 40/24 | s100r:0 med-7.5 33/31 | s100k:4 med-7.1 45/19
+dn121 ila: s160r:0 med-8.0 0/0 | s160k:1 med-7.8 45/19 | s130r:0 med-8.1 25/39 | s130k:1 med-7.8 41/23 | s100r:0 med-8.0 30/34 | s100k:1 med-7.7 44/20

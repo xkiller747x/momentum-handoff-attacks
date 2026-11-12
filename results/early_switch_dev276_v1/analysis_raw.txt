@@ -1,0 +1,67 @@
+== rn50_v1 / fft  n=276
+  s160_reset  dn121: 75.4 vgg16_bn: 67.0 vit_b_16:  2.9  CNNmean  71.2
+  s160_keep   dn121: 80.8 vgg16_bn: 68.5 vit_b_16:  3.3  CNNmean  74.6
+  s130_reset  dn121: 68.8 vgg16_bn: 59.1 vit_b_16:  1.4  CNNmean  63.9
+  s130_keep   dn121: 79.3 vgg16_bn: 69.2 vit_b_16:  5.8  CNNmean  74.3
+  s130_keep vs s160_reset: CNNmean +3.1[+0.4,+6.0] | dn121:+4.0[+0.7,+7.2] p=0.027 lo177/99 | vgg16_bn:+2.2[-1.5,+6.2] p=0.362 lo174/102 | vit_b_16:+2.9[+0.7,+5.4] p=0.039 lo223/53
+  s130_keep vs s130_reset: CNNmean +10.3[+7.2,+13.6] | dn121:+10.5[+6.2,+14.9] p=0.000 lo233/43 | vgg16_bn:+10.1[+6.2,+14.5] p=0.000 lo220/56 | vit_b_16:+4.3[+2.2,+6.9] p=0.000 lo223/53
+  s130_keep vs s160_keep: CNNmean -0.4[-3.3,+2.4] | dn121:-1.4[-4.7,+1.8] p=0.503 lo94/182 | vgg16_bn:+0.7[-3.6,+5.1] p=0.871 lo138/138 | vit_b_16:+2.5[+0.4,+5.1] p=0.065 lo191/85
+  s160_keep vs s160_reset: CNNmean +3.4[+0.9,+6.2] | dn121:+5.4[+2.9,+8.3] p=0.000 lo221/55 | vgg16_bn:+1.4[-2.9,+5.8] p=0.627 lo160/116 | vit_b_16:+0.4[-1.1,+2.2] p=1.000 lo193/83
+  s130_reset vs s160_reset: CNNmean -7.2[-10.1,-4.3] | dn121:-6.5[-10.5,-2.5] p=0.002 lo74/202 | vgg16_bn:-8.0[-12.3,-4.0] p=0.000 lo85/191 | vit_b_16:-1.4[-3.6,+0.4] p=0.289 lo132/144
+== rn50_v1 / aaf  n=276
+  s160_reset  dn121: 79.3 vgg16_bn: 67.4 vit_b_16:  1.4  CNNmean  73.4
+  s160_keep   dn121: 81.5 vgg16_bn: 68.1 vit_b_16:  2.2  CNNmean  74.8
+  s130_reset  dn121: 77.5 vgg16_bn: 67.8 vit_b_16:  2.9  CNNmean  72.6
+  s130_keep   dn121: 82.2 vgg16_bn: 71.0 vit_b_16:  4.3  CNNmean  76.6
+  s130_keep vs s160_reset: CNNmean +3.3[+0.7,+6.0] | dn121:+2.9[+0.0,+5.8] p=0.096 lo177/99 | vgg16_bn:+3.6[-0.4,+7.6] p=0.110 lo188/88 | vit_b_16:+2.9[+1.1,+5.1] p=0.008 lo214/62
+  s130_keep vs s130_reset: CNNmean +4.0[+1.3,+6.7] | dn121:+4.7[+1.8,+7.6] p=0.004 lo212/64 | vgg16_bn:+3.3[-0.7,+7.2] p=0.163 lo182/94 | vit_b_16:+1.4[-0.4,+3.6] p=0.289 lo202/74
+  s130_keep vs s160_keep: CNNmean +1.8[-0.5,+4.2] | dn121:+0.7[-1.8,+3.6] p=0.791 lo123/153 | vgg16_bn:+2.9[-1.1,+6.9] p=0.215 lo185/91 | vit_b_16:+2.2[+0.7,+4.0] p=0.031 lo178/98
+  s160_keep vs s160_reset: CNNmean +1.4[-0.9,+4.0] | dn121:+2.2[-0.7,+5.1] p=0.238 lo183/93 | vgg16_bn:+0.7[-3.3,+4.7] p=0.860 lo130/146 | vit_b_16:+0.7[+0.0,+1.8] p=0.500 lo188/88
+  s130_reset vs s160_reset: CNNmean -0.7[-3.1,+1.4] | dn121:-1.8[-4.7,+1.1] p=0.332 lo109/167 | vgg16_bn:+0.4[-2.9,+3.6] p=1.000 lo149/127 | vit_b_16:+1.4[+0.0,+3.3] p=0.219 lo142/134
+== rn50_v1 / ila  n=276
+  s160_reset  dn121: 76.4 vgg16_bn: 69.9 vit_b_16:  1.8  CNNmean  73.2
+  s160_keep   dn121: 79.3 vgg16_bn: 64.5 vit_b_16:  3.3  CNNmean  71.9
+  s130_reset  dn121: 70.3 vgg16_bn: 57.2 vit_b_16:  1.1  CNNmean  63.8
+  s130_keep   dn121: 73.9 vgg16_bn: 65.6 vit_b_16:  3.6  CNNmean  69.7
+  s130_keep vs s160_reset: CNNmean -3.4[-6.7,-0.2] | dn121:-2.5[-6.9,+1.5] p=0.311 lo97/179 | vgg16_bn:-4.3[-8.7,+0.0] p=0.073 lo111/165 | vit_b_16:+1.8[+0.0,+3.6] p=0.125 lo194/82
+  s130_keep vs s130_reset: CNNmean +6.0[+2.9,+9.1] | dn121:+3.6[+0.4,+7.2] p=0.064 lo186/90 | vgg16_bn:+8.3[+3.6,+13.0] p=0.001 lo199/77 | vit_b_16:+2.5[+1.1,+4.7] p=0.016 lo215/61
+  s130_keep vs s160_keep: CNNmean -2.2[-5.3,+0.9] | dn121:-5.4[-9.8,-1.4] p=0.017 lo71/205 | vgg16_bn:+1.1[-3.3,+5.4] p=0.743 lo127/149 | vit_b_16:+0.4[-1.4,+2.2] p=1.000 lo159/117
+  s160_keep vs s160_reset: CNNmean -1.3[-4.0,+1.4] | dn121:+2.9[-0.7,+6.5] p=0.185 lo174/102 | vgg16_bn:-5.4[-9.8,-1.4] p=0.017 lo118/158 | vit_b_16:+1.4[-0.4,+3.6] p=0.289 lo195/81
+  s130_reset vs s160_reset: CNNmean -9.4[-12.9,-6.2] | dn121:-6.2[-10.1,-2.2] p=0.005 lo57/219 | vgg16_bn:-12.7[-17.8,-8.0] p=0.000 lo53/223 | vit_b_16:-0.7[-2.5,+1.1] p=0.688 lo112/164
+== dn121 / fft  n=276
+  s160_reset  rn50_v1: 65.6 vgg16_bn: 51.4 vit_b_16:  1.4  CNNmean  58.5
+  s160_keep   rn50_v1: 64.5 vgg16_bn: 51.8 vit_b_16:  2.9  CNNmean  58.2
+  s130_reset  rn50_v1: 64.1 vgg16_bn: 49.3 vit_b_16:  0.7  CNNmean  56.7
+  s130_keep   rn50_v1: 68.5 vgg16_bn: 55.8 vit_b_16:  5.1  CNNmean  62.1
+  s130_keep vs s160_reset: CNNmean +3.6[+0.9,+6.5] | rn50_v1:+2.9[-0.4,+6.2] p=0.134 lo187/89 | vgg16_bn:+4.3[+0.0,+8.3] p=0.065 lo170/106 | vit_b_16:+3.6[+1.8,+5.8] p=0.002 lo221/55
+  s130_keep vs s130_reset: CNNmean +5.4[+2.5,+8.5] | rn50_v1:+4.3[+0.7,+8.3] p=0.043 lo212/64 | vgg16_bn:+6.5[+2.2,+10.9] p=0.005 lo188/88 | vit_b_16:+4.3[+2.2,+6.9] p=0.000 lo206/70
+  s130_keep vs s160_keep: CNNmean +4.0[+1.1,+6.9] | rn50_v1:+4.0[+0.4,+7.6] p=0.061 lo170/106 | vgg16_bn:+4.0[+0.0,+8.3] p=0.090 lo181/95 | vit_b_16:+2.2[+0.7,+4.0] p=0.031 lo196/80
+  s160_keep vs s160_reset: CNNmean -0.4[-3.4,+2.7] | rn50_v1:-1.1[-5.1,+2.9] p=0.711 lo145/131 | vgg16_bn:+0.4[-4.0,+4.7] p=1.000 lo122/154 | vit_b_16:+1.4[+0.4,+2.9] p=0.125 lo187/89
+  s130_reset vs s160_reset: CNNmean -1.8[-5.1,+1.3] | rn50_v1:-1.4[-5.4,+2.5] p=0.597 lo118/158 | vgg16_bn:-2.2[-6.9,+2.5] p=0.441 lo115/161 | vit_b_16:-0.7[-1.8,+0.0] p=0.500 lo144/132
+== dn121 / aaf  n=276
+  s160_reset  rn50_v1: 65.2 vgg16_bn: 56.2 vit_b_16:  1.1  CNNmean  60.7
+  s160_keep   rn50_v1: 64.5 vgg16_bn: 50.7 vit_b_16:  2.9  CNNmean  57.6
+  s130_reset  rn50_v1: 68.5 vgg16_bn: 55.8 vit_b_16:  1.1  CNNmean  62.1
+  s130_keep   rn50_v1: 69.9 vgg16_bn: 55.4 vit_b_16:  2.9  CNNmean  62.7
+  s130_keep vs s160_reset: CNNmean +2.0[-0.5,+4.5] | rn50_v1:+4.7[+1.4,+8.3] p=0.015 lo176/100 | vgg16_bn:-0.7[-4.7,+3.3] p=0.860 lo168/108 | vit_b_16:+1.8[+0.0,+4.0] p=0.125 lo195/81
+  s130_keep vs s130_reset: CNNmean +0.5[-2.0,+3.1] | rn50_v1:+1.4[-1.8,+4.7] p=0.523 lo156/120 | vgg16_bn:-0.4[-4.0,+3.3] p=1.000 lo144/132 | vit_b_16:+1.8[+0.4,+3.6] p=0.062 lo186/90
+  s130_keep vs s160_keep: CNNmean +5.1[+2.4,+7.8] | rn50_v1:+5.4[+2.2,+8.7] p=0.003 lo195/81 | vgg16_bn:+4.7[+0.7,+9.1] p=0.041 lo209/67 | vit_b_16:+0.0[-1.8,+1.8] p=1.000 lo172/104
+  s160_keep vs s160_reset: CNNmean -3.1[-5.8,-0.4] | rn50_v1:-0.7[-4.0,+2.9] p=0.839 lo114/162 | vgg16_bn:-5.4[-9.8,-1.1] p=0.020 lo83/193 | vit_b_16:+1.8[+0.4,+3.6] p=0.062 lo172/104
+  s130_reset vs s160_reset: CNNmean +1.4[-0.9,+3.8] | rn50_v1:+3.3[+0.0,+6.5] p=0.093 lo159/117 | vgg16_bn:-0.4[-4.0,+2.9] p=1.000 lo174/102 | vit_b_16:+0.0[-1.1,+1.1] p=1.000 lo145/131
+== dn121 / ila  n=276
+  s160_reset  rn50_v1: 59.4 vgg16_bn: 47.8 vit_b_16:  1.1  CNNmean  53.6
+  s160_keep   rn50_v1: 58.3 vgg16_bn: 48.9 vit_b_16:  4.0  CNNmean  53.6
+  s130_reset  rn50_v1: 50.7 vgg16_bn: 38.0 vit_b_16:  1.8  CNNmean  44.4
+  s130_keep   rn50_v1: 58.7 vgg16_bn: 44.6 vit_b_16:  2.9  CNNmean  51.6
+  s130_keep vs s160_reset: CNNmean -2.0[-5.3,+1.3] | rn50_v1:-0.7[-5.1,+3.6] p=0.864 lo128/148 | vgg16_bn:-3.3[-7.6,+1.1] p=0.188 lo133/143 | vit_b_16:+1.8[+0.4,+3.6] p=0.062 lo187/89
+  s130_keep vs s130_reset: CNNmean +7.2[+4.2,+10.3] | rn50_v1:+8.0[+4.0,+12.0] p=0.000 lo212/64 | vgg16_bn:+6.5[+2.2,+10.9] p=0.006 lo202/74 | vit_b_16:+1.1[-1.1,+3.3] p=0.508 lo196/80
+  s130_keep vs s160_keep: CNNmean -2.0[-5.3,+1.3] | rn50_v1:+0.4[-3.6,+4.3] p=1.000 lo122/154 | vgg16_bn:-4.3[-9.1,+0.4] p=0.096 lo142/134 | vit_b_16:-1.1[-2.5,+0.0] p=0.250 lo142/134
+  s160_keep vs s160_reset: CNNmean +0.0[-2.7,+2.9] | rn50_v1:-1.1[-5.1,+2.9] p=0.720 lo149/127 | vgg16_bn:+1.1[-2.9,+5.1] p=0.720 lo130/146 | vit_b_16:+2.9[+1.1,+5.1] p=0.008 lo202/74
+  s130_reset vs s160_reset: CNNmean -9.2[-12.7,-6.0] | rn50_v1:-8.7[-13.0,-4.3] p=0.000 lo78/198 | vgg16_bn:-9.8[-14.5,-5.4] p=0.000 lo71/205 | vit_b_16:+0.7[-0.7,+2.2] p=0.625 lo121/155
+
+== averages over 6 groups (CNN mean diff, pp)
+  s130_keep vs s160_reset: mean +1.09  per group (rn50 fft aaf ila, dn121 fft aaf ila) +3.1 +3.3 -3.4 +3.6 +2.0 -2.0
+  s130_keep vs s130_reset: mean +5.59  per group (rn50 fft aaf ila, dn121 fft aaf ila) +10.3 +4.0 +6.0 +5.4 +0.5 +7.2
+  s130_keep vs s160_keep: mean +1.06  per group (rn50 fft aaf ila, dn121 fft aaf ila) -0.4 +1.8 -2.2 +4.0 +5.1 -2.0
+  s160_keep vs s160_reset: mean +0.03  per group (rn50 fft aaf ila, dn121 fft aaf ila) +3.4 +1.4 -1.3 -0.4 -3.1 +0.0
+  s130_reset vs s160_reset: mean -4.50  per group (rn50 fft aaf ila, dn121 fft aaf ila) -7.2 -0.7 -9.4 -1.8 +1.4 -9.2

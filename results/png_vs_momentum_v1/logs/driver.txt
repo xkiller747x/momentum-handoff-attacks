@@ -1,0 +1,15 @@
+base160 exit=0 wall_ms=2430606
+base160 bitwise identical incl. momentum: 276 / 276
+logit-fft_png_reset exit=0 wall_ms=249562
+eval_logit-fft_png_reset exit=0 wall_ms=49294
+fft_png_reset exit=0 wall_ms=502520
+eval_fft_png_reset exit=0 wall_ms=52779
+logit-fft_float_reset exit=0 wall_ms=248851
+eval_logit-fft_float_reset exit=0 wall_ms=49429
+fft_float_reset exit=0 wall_ms=506163
+eval_fft_float_reset exit=0 wall_ms=54139
+logit-fft_float_continue exit=0 wall_ms=248602
+eval_logit-fft_float_continue exit=0 wall_ms=49010
+fft_float_continue exit=0 wall_ms=531175
+eval_fft_float_continue exit=0 wall_ms=50972
+ALLDONE

@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "completed": 64,
+  "planned": 64,
+  "source_state_sha256_before": "800bb016116192a0801e81dc2ac332bfe3500336fdba3f48313e6e5cf145347d",
+  "source_state_sha256_after": "800bb016116192a0801e81dc2ac332bfe3500336fdba3f48313e6e5cf145347d",
+  "parameters_and_bn_unchanged": true,
+  "parameters_grad_none": true,
+  "forward_images": 4672,
+  "feature_gradient_images": 3840,
+  "input_gradient_images": 640,
+  "wall_seconds": 146.56748240001616,
+  "utc": "2026-11-04T10:35:30.990916+00:00"
+}

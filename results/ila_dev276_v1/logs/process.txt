@@ -1,0 +1,31 @@
+rn50_v1_base160 exit=0 wall_ms=2903079
+rn50_v1 base160 bitwise identical incl. momentum: 276 / 276
+rn50_v1_ila_author exit=0 wall_ms=239468
+eval_rn50_v1_ila_author exit=0 wall_ms=58544
+rn50_v1_logit-ila_author exit=0 wall_ms=260033
+eval_rn50_v1_logit-ila_author exit=0 wall_ms=53925
+rn50_v1_ila_continue exit=0 wall_ms=237232
+eval_rn50_v1_ila_continue exit=0 wall_ms=67593
+rn50_v1_logit-ila_continue exit=0 wall_ms=219046
+eval_rn50_v1_logit-ila_continue exit=0 wall_ms=95006
+dn121_base160 exit=0 wall_ms=4366404
+dn121 base160 bitwise identical incl. momentum: 276 / 276
+dn121_ila_author exit=0 wall_ms=341466
+eval_dn121_ila_author exit=0 wall_ms=55970
+dn121_logit-ila_author exit=0 wall_ms=284845
+eval_dn121_logit-ila_author exit=0 wall_ms=63767
+dn121_ila_continue exit=0 wall_ms=345081
+eval_dn121_ila_continue exit=0 wall_ms=54640
+dn121_logit-ila_continue exit=0 wall_ms=301160
+eval_dn121_logit-ila_continue exit=0 wall_ms=60194
+vgg16_bn_base160 exit=0 wall_ms=3710864
+vgg16_bn base160 bitwise identical incl. momentum: 276 / 276
+vgg16_bn_ila_author exit=0 wall_ms=234752
+eval_vgg16_bn_ila_author exit=0 wall_ms=118187
+vgg16_bn_logit-ila_author exit=0 wall_ms=261566
+eval_vgg16_bn_logit-ila_author exit=0 wall_ms=104909
+vgg16_bn_ila_continue exit=0 wall_ms=247751
+eval_vgg16_bn_ila_continue exit=0 wall_ms=116038
+vgg16_bn_logit-ila_continue exit=0 wall_ms=267061
+eval_vgg16_bn_logit-ila_continue exit=0 wall_ms=102407
+ALLDONE

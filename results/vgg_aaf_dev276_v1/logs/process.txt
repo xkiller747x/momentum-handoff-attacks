@@ -1,0 +1,9 @@
+base160 exit=0 wall_ms=3146180
+base160 bitwise identical incl. momentum: 276 / 276
+aaf_author exit=0 wall_ms=1852959
+eval_aaf_author exit=0 wall_ms=77381
+aaf_continue exit=0 wall_ms=1822408
+eval_aaf_continue exit=0 wall_ms=77492
+logit-aaf_continue exit=0 wall_ms=1461216
+eval_logit-aaf_continue exit=0 wall_ms=68428
+ALLDONE

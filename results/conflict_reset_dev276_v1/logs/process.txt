@@ -1,0 +1,12 @@
+rn50_v1_base160 exit=0 wall_ms=3253843
+results/conflict_reset_dev276_v1/rn50_v1_base160 bitwise identical incl. momentum: 276 / 276
+rn50_v1_fft_conflict exit=0 wall_ms=522310
+eval_rn50_v1_fft_conflict exit=0 wall_ms=52202
+rn50_v1_logit-fft_conflict exit=0 wall_ms=252122
+eval_rn50_v1_logit-fft_conflict exit=0 wall_ms=50138
+dn121_base160 exit=0 wall_ms=3116533
+results/conflict_reset_dev276_v1/dn121_base160 bitwise identical incl. momentum: 276 / 276
+dn121_fft_conflict exit=0 wall_ms=783578
+eval_dn121_fft_conflict exit=0 wall_ms=54468
+dn121_logit-fft_conflict exit=0 wall_ms=314701
+eval_dn121_logit-fft_conflict exit=0 wall_ms=52080

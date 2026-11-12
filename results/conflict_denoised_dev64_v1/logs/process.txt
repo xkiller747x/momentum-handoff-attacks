@@ -1,0 +1,8 @@
+base160 exit=0 wall_ms=598517
+base160 bitwise identical incl. momentum: 64 /64
+fft_K4 exit=0 wall_ms=116217
+eval_fft_K4 exit=0 wall_ms=17245
+fft_K16 exit=0 wall_ms=148078
+eval_fft_K16 exit=0 wall_ms=19084
+logit-fft_K16 exit=0 wall_ms=102862
+eval_logit-fft_K16 exit=0 wall_ms=17202

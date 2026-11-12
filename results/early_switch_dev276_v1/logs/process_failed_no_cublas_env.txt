@@ -1,0 +1,8 @@
+rn50_v1_base exit=2 wall_ms=44453
+dn121_base exit=2 wall_ms=3090
+rn50_v1_fft_s130_reset exit=2 wall_ms=2952
+rn50_v1_fft_s130_keep exit=2 wall_ms=2951
+rn50_v1_aaf_s130_reset exit=2 wall_ms=2937
+rn50_v1_aaf_s130_keep exit=2 wall_ms=2938
+rn50_v1_ila_s130_reset exit=2 wall_ms=2945
+rn50_v1_ila_s130_keep exit=2 wall_ms=2993

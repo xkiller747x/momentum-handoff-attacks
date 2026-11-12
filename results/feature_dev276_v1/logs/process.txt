@@ -1,0 +1,14 @@
+base exit=0 wall_ms=3650865
+fft exit=0 wall_ms=506907
+aaf exit=0 wall_ms=1886318
+logit-fft exit=0 wall_ms=241554
+logit-aaf exit=0 wall_ms=1326538
+eval_base160 exit=0 wall_ms=49634
+eval_base170 exit=0 wall_ms=49827
+eval_base175 exit=0 wall_ms=54855
+eval_base200 exit=0 wall_ms=50776
+eval_base235 exit=0 wall_ms=48085
+eval_fft exit=0 wall_ms=50107
+eval_aaf exit=0 wall_ms=56115
+eval_logit-fft exit=0 wall_ms=50231
+eval_logit-aaf exit=0 wall_ms=50055
